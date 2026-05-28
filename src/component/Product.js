@@ -25,7 +25,7 @@ const Product = () => {
       console.log(`this is after setting product ${product}`);
     };
     getProduct();
-  }, []);
+  }, [id,product]);
 
   const ShowProduct = () => {
     return (
