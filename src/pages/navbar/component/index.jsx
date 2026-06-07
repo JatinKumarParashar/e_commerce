@@ -195,7 +195,7 @@ const Navbar = () => {
               </NavLink>
 
               <button className="hover:text-slate-900 transition-colors">
-                <User className="h-5 w-5" />
+                <NavLink to="/register"><User className="h-5 w-5" /></NavLink>
               </button>
             </div>
           </div>

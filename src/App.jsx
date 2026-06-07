@@ -13,6 +13,7 @@ import Wish from './pages/wishLIst/component'
 import Contact from './pages/contact/component'
 import About from './pages/about/component'
 import FAQ from './pages/faq/component'
+import Register from './pages/user/component'
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
         <Route path='/faq' element={<FAQ />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
       <Footer></Footer>
 
