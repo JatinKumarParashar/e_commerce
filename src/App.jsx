@@ -1,0 +1,42 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import Navbar from './pages/navbar/component'
+import { Route, Routes } from 'react-router-dom'
+import Main from './pages/main/component'
+import Products from './pages/products/component/products'
+import Product from './pages/products/component/productDetail'
+import Footer from './pages/footer/component'
+import Cart from './pages/cart/component'
+import Wish from './pages/wishLIst/component'
+import Contact from './pages/contact/component'
+import About from './pages/about/component'
+import FAQ from './pages/faq/component'
+
+
+
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/products/:id' element={<Product />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/wish' element={<Wish />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/faq' element={<FAQ />} />
+      </Routes>
+      <Footer></Footer>
+
+    </>
+  )
+}
+
+export default App
