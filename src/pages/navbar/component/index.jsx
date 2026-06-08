@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 // import { searchItems } from '../../../store/reducer/handleData';
 import { fetchAndSearchItems } from '../../../store/action';
 
+// Navbar component shows top navigation, search toggle, and cart/wishlist counts.
+// It also maintains mobile menu state and dispatches search actions to Redux.
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const state = useSelector((state) => state.handleCart);
@@ -91,7 +94,7 @@ const Navbar = () => {
                     return next;
                   });
                 }}
-                className="absolute right-3 top-2.5 "
+                className="absolute right-3 top-1/5 "
               >
                 <Search className="h-4 w-4 text-slate-400" />
               </button>

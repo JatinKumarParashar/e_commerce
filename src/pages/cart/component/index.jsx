@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCart, delCart, removeCart } from "../../../store/action";
 import { NavLink } from "react-router-dom";
 
+// Cart page shows items currently placed in the user's shopping cart.
+// It allows quantity changes and removes items while showing summaries.
+
 const Cart = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.handleCart);

@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// ProductCard renders a single product preview used inside the products grid.
+// It combines the image, title, category and price into a clickable card.
 const ProductCard = ({ product }) => {
   return (
     <article className="overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-2xl">

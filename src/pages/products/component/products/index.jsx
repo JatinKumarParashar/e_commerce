@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 import ProductCard from "../productCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAndSearchItems } from "../../../../store/action";
+
+// Products page displays the product catalog, handles category filters,
+// and paginates the displayed product cards.
 // import Footer from "./footer";
 // import ProductCard from "./productCard";
 

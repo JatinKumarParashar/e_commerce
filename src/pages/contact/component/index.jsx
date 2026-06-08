@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+// Contact page shows contact information and provides a simple form.
+// The form performs local validation and simulates a submission flow.
 const Contact = () => {
 	const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 	const [submitting, setSubmitting] = useState(false);
@@ -37,15 +39,15 @@ const Contact = () => {
 					<div className="space-y-4 text-sm text-slate-700">
 						<div>
 							<h4 className="font-semibold text-sky-400">Customer Support</h4>
-							<p className="text-slate-500">support@lacollection.com</p>
+							<p className="text-slate-500">abc@gmail.com</p>
 						</div>
 						<div>
 							<h4 className="font-semibold text-sky-400">Phone</h4>
-							<p className="text-slate-500">+1 (555) 123-4567</p>
+							<p className="text-slate-500">+91 9876543210</p>
 						</div>
 						<div>
 							<h4 className="font-semibold text-sky-400">Address</h4>
-							<p className="text-slate-500">123 Fashion Ave, Suite 100, New York, NY</p>
+							<p className="text-slate-500">Mathura, Uttar Pradesh</p>
 						</div>
 					</div>
 

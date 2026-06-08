@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addCart, addWishList } from "../../../../store/action/";
 
+// ProductDetail page fetches a single product by id and shows detailed information.
+// Users can add the product to cart or wishlist from this view.
+
 const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);

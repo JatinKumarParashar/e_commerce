@@ -40,10 +40,8 @@ export const emptyCart=(product)=>{
     }
 };
 
-// 1. Initial State Definition
-
-
-// 2. THE ACTION CREATOR: Handles the asynchronous backend fetch
+// Asynchronous action creator for fetching products from the API.
+// It dispatches a SEARCH action with both the raw list and the search keyword.
 export const fetchAndSearchItems = (searchTerm="") => {
   return async (dispatch) => {
     try {

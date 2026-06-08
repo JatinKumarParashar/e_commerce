@@ -1,9 +1,11 @@
+// Read persisted cart and wishlist data from localStorage so state survives page refresh.
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let wishList = JSON.parse(localStorage.getItem("wishList")) || [];
 
 export const handleCart = (state = cart, action) => {
   const product = action.payload;
   switch (action.type) {
+    // Add item to cart or increase its quantity if already present.
     case "ADDITEM": {
       const exist = state.find((x) => x.id === product.id);
       let updatedCart;
@@ -43,6 +45,7 @@ export const handleCart = (state = cart, action) => {
 export const handleWishList = (state = wishList, action) => {
   const product = action.payload;
   switch (action.type) {
+    // Add item to wishlist if not already present.
     case "ADDWISH": {
       const exist = state.find((x) => x.id === product.id);
       if (exist) return state;
@@ -68,7 +71,9 @@ const initialState = {
   allItems: [], // Holds the raw backend master list
   filteredItems: [], // Holds the items filtered by search
 };
-// 3. THE REDUCER: Pure function that safely updates state
+
+// searchItemsReducer maintains the product list and search results.
+// It stores both the full list and the filtered subset used by product pages.
 export const searchItemsReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SEARCH":

@@ -4,6 +4,8 @@ import hero from "../../../assets/hero.png";
 import { NavLink } from 'react-router-dom';
 import Products from '../../products/component/products';
 
+// Main page is the storefront landing page with hero sliders
+// and featured product previews pulled from the Products component.
 const Main = () => {
   const slides = [
     {

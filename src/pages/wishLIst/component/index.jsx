@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { addCart, removeWishList } from "../../../store/action";
 
+// Wishlist component shows saved products, letting users move items to cart
+// or remove them from their favorites list.
+
 const Wish = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.handleWishList);

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+// Register page handles user signup with client-side validation,
+// localStorage persistence, and redirect after success.
 const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({

@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import { LuInstagram } from "react-icons/lu";
+import { LuFacebook } from "react-icons/lu";
+import { LuTwitter } from "react-icons/lu";
+// Footer renders site-wide navigation links and support info.
+// It appears under the main content on every page.
 const Footer = () => {
   return (
     <footer className="w-full bg-slate-900 text-slate-200">
@@ -20,9 +24,6 @@ const Footer = () => {
               <NavLink to="/products" className="hover:text-sky-300 transition-colors">Products</NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className="hover:text-sky-300 transition-colors">Contact Us</NavLink>
-            </li>
-            <li>
               <NavLink to="/cart" className="hover:text-sky-300 transition-colors">Cart</NavLink>
             </li>
             <li>
@@ -34,9 +35,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-slate-100 mb-4">Customer Care</h3>
           <ul className="space-y-2 text-sm text-slate-300">
-            <li className="hover:text-sky-300 transition-colors">Order Tracking</li>
-            <li className="hover:text-sky-300 transition-colors">Shipping Info</li>
-            <li className="hover:text-sky-300 transition-colors">Returns & Exchanges</li>
+            <li className="hover:text-sky-300 transition-colors"><NavLink to="/contact">Contact Us</NavLink></li>
             <li className="hover:text-sky-300 transition-colors"><NavLink to="/faq">FAQs</NavLink></li>
           </ul>
         </div>
@@ -44,16 +43,16 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-slate-100 mb-4">Contact</h3>
           <p className="text-sm text-slate-300 leading-6">
-            Email: support@lacollection.com
+            Email: abc@gmail.com
             <br />
-            Phone: +1 (555) 123-4567
+            Phone: +91 9876543210
           </p>
           <div className="mt-4 space-y-2 text-sm text-slate-300">
             <p className="font-semibold text-slate-100">Follow Us</p>
             <div className="flex flex-wrap gap-3">
-              <a href="www.instagram.com" className="text-slate-300 hover:text-sky-300 transition-colors">Instagram</a>
-              <a href="www.facebook.com" className="text-slate-300 hover:text-sky-300 transition-colors">Facebook</a>
-              <a href="www.twitter.com" className="text-slate-300 hover:text-sky-300 transition-colors">Twitter</a>
+              <a href="https://www.instagram.com" className="text-slate-300 hover:text-sky-300 transition-colors" target="_blank" rel="noopener noreferrer"><LuInstagram /></a>
+              <a href="https://www.facebook.com" className="text-slate-300 hover:text-sky-300 transition-colors" target="_blank" rel="noopener noreferrer"><LuFacebook /></a>
+              <a href="https://www.twitter.com" className="text-slate-300 hover:text-sky-300 transition-colors" target="_blank" rel="noopener noreferrer"><LuTwitter /></a>
             </div>
           </div>
         </div>

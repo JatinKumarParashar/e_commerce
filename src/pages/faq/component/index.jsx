@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+
+// FAQ component provides an accordion-style list of common questions.
+// Clicking a question toggles the corresponding answer section.
 const FAQ = () => {
 
     const [isOpen, setIsOpen] = useState(0);

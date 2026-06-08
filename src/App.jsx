@@ -15,6 +15,10 @@ import About from './pages/about/component'
 import FAQ from './pages/faq/component'
 import Register from './pages/user/component'
 
+// App is the root component for the application UI.
+// It renders the global navigation and footer around page routes.
+// Each route maps to a page component representing a different app section.
+
 
 
 
@@ -23,6 +27,7 @@ function App() {
 
   return (
     <>
+      {/* The navbar and footer are always shown around route content. */}
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Main />} />
