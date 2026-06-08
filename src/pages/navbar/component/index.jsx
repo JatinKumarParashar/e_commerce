@@ -154,7 +154,9 @@ const Navbar = () => {
                   {state.length}
                 </span>
               </NavLink>
-              <User className="h-6 w-6 text-slate-600" />
+              <NavLink to="/register">
+                <User className="h-6 w-6 text-slate-600" />
+              </NavLink>
             </div>
           </div>
         </div>

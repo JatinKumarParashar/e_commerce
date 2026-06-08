@@ -42,6 +42,26 @@ const Main = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [parallaxOffset, setParallaxOffset] = useState(0);
+
+  useEffect(() => {
+    let frame = null;
+    const handleScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        setParallaxOffset(window.scrollY * 0.2);
+        frame = null;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,7 +82,7 @@ const Main = () => {
   return (
     <main className="bg-slate-50">
       <section className="relative overflow-hidden">
-        <div className="relative w-full h-[520px] overflow-hidden sm:h-[620px]">
+        <div className="relative w-full h-130 overflow-hidden sm:h-155">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -73,9 +93,10 @@ const Main = () => {
               <img
                 src={slide.image}
                 alt={slide.eyebrow}
-                className="h-[520px] w-full object-cover"
+                className="h-130 w-full object-cover transition-transform duration-700 ease-out will-change-transform min-h-screen min-w-screen"
+                style={{ transform: `translateY(${parallaxOffset}px)` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-r from-slate-950/85 via-slate-950/30 to-transparent" />
               <div className="absolute inset-0 flex items-center">
                 <div className="max-w-4xl px-6 py-20 sm:px-10 lg:px-16">
                   <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-400">
